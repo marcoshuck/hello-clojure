@@ -4,5 +4,5 @@
   {:status 200 :body "OK"})
 
 (defn get-routes []
-  ["/healthz" :get healthz :route-name :healthz])
+  #{["/healthz" :get healthz :route-name :healthz]})
 

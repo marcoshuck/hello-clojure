@@ -3,4 +3,11 @@
             [io.pedestal.http.route :as route]))
 
 (defn create-server [routes, port]
-  (http/create-server {::http/routes (route/expand-routes routes) ::http/type :jetty ::http/port port}))
+  (http/create-server
+    {::http/routes (route/expand-routes routes)
+     ::http/type   :jetty
+     ::http/port   port
+     ::http/join?  false
+     }
+    )
+  )
