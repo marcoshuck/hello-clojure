@@ -6,5 +6,6 @@
                  [io.pedestal/pedestal.service  "0.6.1"]
                  [io.pedestal/pedestal.route "0.6.1"]
                  [io.pedestal/pedestal.jetty   "0.6.1"]
-                 [org.slf4j/slf4j-simple       "2.0.9"]]
+                 [org.slf4j/slf4j-simple       "2.0.9"]
+                 [metosin/malli "0.20.3"]]
   :repl-options {:init-ns todo.main})

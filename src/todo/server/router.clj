@@ -1,6 +1,7 @@
 (ns todo.server.router
   (:require [clojure.set :as set]
-            [todo.health.routes :as health]))
+            [todo.health.routes :as health]
+            [todo.users.routes :as users]))
 
 (defn- prefix-routes [prefix routes]
   (into #{} (map (fn [[path & rest-route]] (into [(str prefix path)] rest-route))) routes))
@@ -13,5 +14,6 @@
   "Returns all project routes in a union set"
   []
   (set/union
-    (api (v1 (health/get-routes))))
+    (api (v1 (health/get-routes)))
+    (api (v1alpha1 (users/get-routes))))
   )
