@@ -1,4 +1,4 @@
-(ns basic-server.config
+(ns todo.config.reader
   (:require [clojure.java.io :as io]
             [aero.core :as aero]))
 

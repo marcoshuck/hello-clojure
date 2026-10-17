@@ -1,5 +1,5 @@
-(ns basic-server.health-test
-  (:require [basic-server.health :as health]
+(ns todo.health.health-test
+  (:require [todo.health.routes :as health]
             [clojure.test :refer :all]
             [io.pedestal.http :as http]
             [io.pedestal.http.route :as route]
